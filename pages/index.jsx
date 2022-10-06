@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Sidebar from "../components/sidebar/";
-
+import Cover from "../components/cover";
 export default function Home() {
   return (
     <div id="app">
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Sidebar />
 
-      <h1>Lets build whatsapp 2.0</h1>
+      <Cover />
     </div>
   );
 }
