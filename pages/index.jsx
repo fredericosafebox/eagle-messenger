@@ -2,7 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Sidebar from "../components/sidebar/";
 import Cover from "../components/cover";
+import Modal from "../components/modal";
+import NewChatForm from "../components/form";
+import { useSelector } from "react-redux";
+
 export default function Home() {
+  const { modal } = useSelector((state) => state.modal);
+
   return (
     <div id="app">
       <Head>
@@ -11,8 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Sidebar />
-
       <Cover />
+      {modal && (
+        <Modal>
+          <NewChatForm />
+        </Modal>
+      )}
     </div>
   );
 }

@@ -2,6 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+:root {
+    //COLOR PRIMARY
+    --primary: 29, 53, 87; //#1d3557
+    
+    //GREY SCALE
+    --grey-1: 248, 249, 250; //#F8F9FA
+}
+
 * {
     padding: 0;
     margin: 0;

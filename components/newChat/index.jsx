@@ -1,7 +1,14 @@
 import { StyledButton } from "./styles";
+import { useDispatch } from "react-redux";
+import { setModalOpen } from "../../store/reducers/modalSlice";
 
 function NewChat() {
-  return <StyledButton>START A NEW CHAT</StyledButton>;
+  const dispatch = useDispatch();
+  return (
+    <StyledButton onClick={() => dispatch(setModalOpen())}>
+      START A NEW CHAT
+    </StyledButton>
+  );
 }
 
 export default NewChat;
